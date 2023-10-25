@@ -1,0 +1,205 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vmax 8vmax;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    background-color: rgb(32, 32, 38);
+  }
+
+  nav img{
+    width: 150px;
+    cursor: pointer;
+  }
+
+  nav .navigation ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav .navigation ul li{
+    list-style: none;
+    margin-left: 30px;
+    
+  }
+
+  nav .navigation ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transform: 0.3s ease;
+  }
+
+  nav .navigation ul li a:hover{
+    color: rgb(241, 108, 12);
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header img {
+    max-width: 100px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+#courses-list {
+    margin-top: 20px;
+}
+
+.course-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.course-card h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.course-card p {
+    color: #777;
+    margin: 5px 0;
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Your existing styles here */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.course-form {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Your existing styles here */
+
+/* Add styles for the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-info,
+.contact-info {
+    flex: 1;
+    padding: 10px;
+}
+
+.project-info h3,
+.contact-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 14px;
+    margin: 5px 0;
+}

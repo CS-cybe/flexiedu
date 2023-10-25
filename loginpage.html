@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="loginpage.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+
+        
+        <form action="loginpage.php" method="post">
+            <div class="input-container">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-container">
+                <input type="submit" value="Login" onclick="handleSubmit()">
+            </div>
+
+            
+        </form>
+    </div>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Courses - Learning Platform</title>
+    <link rel="stylesheet" href="course_adding.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="LOGO.png" alt="">
+            <div class="navigation">
+                <ul>
+                    <li><a href="Navigation.html">Home</a></li>
+                    <li><a href="Profile.html">Profile</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Courses</a></li>    
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="course-form">
+            <h1>Add a New Course</h1>
+            <form id="course-form">
+                <label for="course-name">Course Name:</label>
+                <input type="text" id="course-name" required>
+                
+                <label for="course-type">Course Type:</label>
+                <select id="course-type">
+                    <option value="free">Free</option>
+                    <option value="paid">Paid</option>
+                </select>
+                
+                <label for="main-category">Main Category:</label>
+                <input type="text" id="main-category" required>
+                
+                <label for="sub-category">Subcategory:</label>
+                <input type="text" id="sub-category" required>
+                
+                <label for="course-fee">Course Fee (if paid):</label>
+                <input type="text" id="course-fee" placeholder="Enter course fee" disabled>
+                
+                <button type="submit">Add Course</button>
+            </form>
+        </div>
+        
+        <div class="image-container">
+            <img src="course.jpg" alt="Image Description">
+        </div>
+    </div>
+
+
+        
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const courseForm = document.getElementById('course-form');
+            const coursesList = document.getElementById('courses-list');
+            const courseTypeSelect = document.getElementById('course-type');
+            const courseFeeInput = document.getElementById('course-fee');
+
+            // Function to toggle the "Course Fee" input based on the "Course Type" selection
+            function toggleCourseFeeInput() {
+                if (courseTypeSelect.value === 'paid') {
+                    courseFeeInput.removeAttribute('disabled');
+                } else {
+                    courseFeeInput.setAttribute('disabled', 'disabled');
+                }
+            }
+
+            // Initial state based on page load
+            toggleCourseFeeInput();
+
+            // Event listener for changes in the "Course Type" selection
+            courseTypeSelect.addEventListener('change', toggleCourseFeeInput);
+
+            courseForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const courseName = document.getElementById('course-name').value;
+                const courseType = courseTypeSelect.value;
+                const mainCategory = document.getElementById('main-category').value;
+                const subCategory = document.getElementById('sub-category').value;
+                const courseFee = courseFeeInput.value;
+
+                const courseCard = document.createElement('div');
+                courseCard.className = 'course-card';
+                courseCard.innerHTML = `
+                    <h2>${courseName}</h2>
+                    <p>Type: ${courseType}</p>
+                    <p>Main Category: ${mainCategory}</p>
+                    <p>Subcategory: ${subCategory}</p>
+                    ${courseType === 'paid' ? `<p>Course Fee: $${courseFee}</p>` : ''}
+                `;
+
+                coursesList.appendChild(courseCard);
+                courseForm.reset();
+
+                // Reset the "Course Fee" input to its initial state
+                toggleCourseFeeInput();
+            });
+        });
+    </script>
+
+<footer>
+    <div class="footer-content">
+        <div class="project-info">
+            <h3>Group 28 Project</h3>
+            <p>University of Sri Jayewardenepura</p>
+        </div>
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <ul>
+                <li>ICT/20/857 Anushka Indunil</li>
+                <li>ICT/20/856 Chathuranga Sampath </li>
+                <li>ICT/20/802 Nandun</li>
+                <li>ICT/20/881 Hashini</li>
+                <li>ICT/20/924 Amila</li>
+                <!-- Add more members as needed -->
+            </ul>
+            
+        </div>
+    </div>
+    <p>All right reserved</p>
+</footer>
+
+ 
+
+</body>
+</html>
