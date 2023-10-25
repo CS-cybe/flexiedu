@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="register.css">
+
+    <script>
+        function checkPassword() {
+            // Get the values from the password and confirm password fields
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Check if the passwords match
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                // Optionally, you can clear the fields or take other actions
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Registration</h2>
+
+
+        
+
+        <form action="index.php" method="post"  > 
+            <div class="input-container">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="input-container">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="input-container">
+                <label for="telephone">Telephone Number</label>
+                <input type="tel" id="telephone" name="telephone" required>
+            </div>
+            <div class="input-container">
+                <label for="level">Level</label>
+                <select id="level" name="level">
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="expert">Expert</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-container">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="input-container">
+               
+                <input type="submit" value="Register" onclick="checkPassword()" >
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <img src="" alt="">
+    </div>
+
+   
+
+</body>
+</html>
